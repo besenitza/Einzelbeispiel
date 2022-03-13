@@ -59,9 +59,10 @@ public class MainActivity extends AppCompatActivity {
                     inputNumber /= 10;
                 }
 
-                // Delete primes from array
+                // Delete primes from array - only possible primes between 0 and 9 are 2, 3, 5 and 7
                 int i = 0;
                 while (i < length) {
+                    // man hätte eine eigene Funktion für Primzahlermittlung machen können aber da es nur 4 mögliche einstellige Primzahlen gibt habe ich diese statisch abgefragt
                     if (arrayNumbers[i] == 2 || arrayNumbers[i] == 3 || arrayNumbers[i] == 5 || arrayNumbers[i] == 7) {
                         arrayNumbers = removeTheElement(arrayNumbers, i);
                         length = arrayNumbers.length;
